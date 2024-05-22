@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>app.js</script>
-    <script defer src="./app.js"></script>
-    <link rel="stylesheet" href="./css/style.css">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="container">
+        <h1>Welcome to the Quiz Game</h1>
+        <div id="category">
+            <button id="history-btn">History</button>
+            <button id="science-btn">Science</button>
+        </div>
+        <div id="question-container">
+            <div id="question"></div>
+            <div id="choices"></div>
+            <div id="message"></div>
+            <div id="score">Score: <span id="score-value">0</span></div>
+        </div>
+        <audio id="correct-audio" src="correct.mp3"></audio>
+        <audio id="wrong-audio" src="wrong.mp3"></audio>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
 
