@@ -13,6 +13,7 @@
 /*----------- Event Listeners ----------*/
 
 const questions = {
+    
     history: [
         {
             question: "What year did World War II end?",
@@ -43,6 +44,17 @@ let currentCategory = null;
 let currentQuestionIndex = 0;
 let score = 0;
 
+// Add event listeners to category buttons
+document.getElementById('history-btn').addEventListener('click', () => {
+    currentCategory = 'history';
+    startGame();
+});
+
+document.getElementById('science-btn').addEventListener('click', () => {
+    currentCategory = 'science';
+    startGame();
+});
+
 const categoryButtons = document.querySelectorAll('#category button');
 const questionElement = document.getElementById('question');
 const choicesElement = document.getElementById('choices');
@@ -50,6 +62,7 @@ const messageElement = document.getElementById('message');
 const scoreElement = document.getElementById('score-value');
 const correctAudio = document.getElementById('correct-audio');
 const wrongAudio = document.getElementById('wrong-audio');
+
 
 categoryButtons.forEach(button => {
     button.addEventListener('click', () => {
